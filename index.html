@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- first card -->
+    <div class="bg-container">
+      <h1>Smart Event Dashboard🎯</h1>
+      <div class="add-event">
+        <h3>Add New Event</h3>
+        <p>Event Name:</p>
+        <input type="text" placeholder="Event Name" id="event-name" />
+        <p>Event Date:</p>
+        <input type="date" placeholder="Event Date" id="event-date" />
+        <p>Category:</p>
+
+        <select id="category">
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="other">Other</option>
+        </select>
+        <p>Description:</p>
+        <textarea id="event-description"></textarea><br /><br />
+        <button id="add-event-btn">Add Event</button>
+      </div>
+
+      <!-- second card -->
+      <div class="card">
+        <h3>My Events</h3>
+        <button id="clear-events">Clear All Events</button>
+        <button id="sample-events">Add Sample Events</button>
+
+        <div id="events-list"></div>
+      </div>
+
+      <!-- third card -->
+      <div class="DOM">
+        <h3>DOM Manipulation Demo</h3>
+        <p id="key-display">You pressed: None</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
