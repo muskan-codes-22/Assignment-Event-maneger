@@ -26,39 +26,18 @@ Assignment-Event maneger/
 
 ```mermaid
 flowchart TD
-    Start([User Opens App]) --> Display[Display Event Dashboard]
-    Display --> Menu{User Action}
+    Start([Open App]) --> Show[Display Dashboard]
+    Show --> Choice{Choose Action}
 
-    Menu -->|Enter Event Details| Input[Fill Event Form<br/>Name, Date, Category, Description]
-    Input --> AddBtn{Click Add Event?}
-    AddBtn -->|No Empty Fields| Create[Create Event Object]
-    AddBtn -->|Empty Fields| Alert["⚠️ Show Alert<br/>Fill Required Fields"]
-    Alert --> Input
+    Choice -->|Add Event| Add[📝 Add Event to List]
+    Choice -->|Delete| Delete[❌ Delete Event]
+    Choice -->|Sample| Sample[📄 Add Sample Events]
+    Choice -->|Clear| Clear[🧹 Clear All Events]
 
-    Create --> Grid[Add Event to Grid<br/>Display with Gradient Card]
-    Grid --> Clear[Clear Input Fields]
-    Clear --> Display
-
-    Menu -->|Click Delete| Delete["❌ Remove Event<br/>from DOM"]
-    Delete --> Display
-
-    Menu -->|Click Sample| Sample[Add Sample Events<br/>Emifest & Project Review]
-    Sample --> Display
-
-    Menu -->|Click Clear All| ClearAll["🧹 Remove All Events"]
-    ClearAll --> Empty["Display Empty Grid"]
-    Empty --> Display
-
-    Menu -->|Press Key| DOM["📊 DOM Demo Shows<br/>Pressed Key"]
-    DOM --> Display
-
-    style Start fill:#4CAF50
-    style Create fill:#2196F3
-    style Grid fill:#FF9800
-    style Delete fill:#f44336
-    style ClearAll fill:#f44336
-    style Sample fill:#9C27B0
-    style DOM fill:#00BCD4
+    Add --> Show
+    Delete --> Show
+    Sample --> Show
+    Clear --> Show
 ```
 
 ## Installation & Usage
