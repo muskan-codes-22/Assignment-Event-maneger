@@ -8,21 +8,23 @@ addBtn.addEventListener("click", () => {
   const name = document.getElementById("event-name").value;
   const date = document.getElementById("event-date").value;
   const desc = document.getElementById("event-description").value;
+  const category = document.getElementById("category").value;
 
   if (name === "" || date === "") {
     alert("Please enter event name and date");
     return;
   }
 
-  createEvent(name, date, desc);
+  createEvent(name, date, desc, category);
 
   // clear inputs
   document.getElementById("event-name").value = "";
   document.getElementById("event-date").value = "";
   document.getElementById("event-description").value = "";
+  document.getElementById("category").value = "";
 });
 
-function createEvent(name, date, desc) {
+function createEvent(name, date, desc, category) {
   const eventDiv = document.createElement("div");
   eventDiv.classList.add("event-item");
 
@@ -31,6 +33,7 @@ function createEvent(name, date, desc) {
     <h4>${name}</h4>
     <small>${date}</small>
     <p>${desc}</p>
+    <span class="category">${category}</span>
   `;
 
   // delete functionality
@@ -48,8 +51,8 @@ clearBtn.addEventListener("click", () => {
 });
 // ADD SAMPLE EVENTS
 sampleBtn.addEventListener("click", () => {
-  createEvent("Emifest", "2026-01-14", "Lorem ipsum");
-  createEvent("Project Review", "2026-02-10", "Frontend submission");
+  createEvent("Emifest", "2026-01-14", "Lorem ipsum","Work");
+  createEvent("Project Review", "2026-02-10", "Frontend submission","Other");
 });
 
 // for keys to display

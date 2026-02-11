@@ -161,16 +161,6 @@ button:hover {
   margin-right: 6px;
 }
 
-/* Category tag */
-.event-item .tag {
-  display: inline-block;
-  background-color: #2563eb;
-  color: #ffffff;
-  font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 12px;
-  margin: 6px 0;
-}
 
 /* Description */
 .event-item p {
@@ -181,7 +171,6 @@ button:hover {
 
 
 /* cross delete button  */
-
 .event-item {
   position: relative;
 }
@@ -193,7 +182,7 @@ button:hover {
   cursor: pointer;
   font-size: 14px;
 }
-
+/* for zoom in on hover */
 .delete-btn:hover {
   transform: scale(1.2);
 }
