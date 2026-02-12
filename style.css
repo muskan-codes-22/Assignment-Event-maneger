@@ -35,7 +35,6 @@ h1 {
 .add-event {
   width: 30%;
   min-width: 300px;
- 
 }
 
 /* Align cards side by side */
@@ -146,7 +145,6 @@ button:hover {
 
 .event-item:hover {
   transform: scale(1.05);
- 
 }
 
 /* Event title */
