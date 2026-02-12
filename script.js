@@ -17,13 +17,15 @@ addBtn.addEventListener("click", () => {
 
   createEvent(name, date, desc, category);
 
-  // clear inputs
+  // clear inputs so it gets empty to fill another event
   document.getElementById("event-name").value = "";
   document.getElementById("event-date").value = "";
   document.getElementById("event-description").value = "";
   document.getElementById("category").value = "";
 });
 
+// event card creation function that will appear after add event btn is clicked
+// This is not written in html
 function createEvent(name, date, desc, category) {
   const eventDiv = document.createElement("div");
   eventDiv.classList.add("event-item");
@@ -51,8 +53,8 @@ clearBtn.addEventListener("click", () => {
 });
 // ADD SAMPLE EVENTS
 sampleBtn.addEventListener("click", () => {
-  createEvent("Emifest", "2026-01-14", "Lorem ipsum","Work");
-  createEvent("Project Review", "2026-02-10", "Frontend submission","Other");
+  createEvent("Emifest", "2026-01-14", "Lorem ipsum", "Work");
+  createEvent("Project Review", "2026-02-10", "Frontend submission", "Other");
 });
 
 // for keys to display

@@ -1,16 +1,17 @@
 * {
   margin: 0;
-
+  padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 20px;
   background-color: #eaf1fb;
-  height: 100%;
-  width: 100%;
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: flex-start; /* keep it top aligned */
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 h1 {
@@ -18,7 +19,6 @@ h1 {
   margin-bottom: 20px;
   color: rgb(0, 0, 0);
   margin-left: 50px;
-  
 }
 
 /* Layout */
@@ -33,9 +33,10 @@ h1 {
 }
 
 .add-event {
-  width: 250px; 
+  width: 30%;
+  min-width: 300px;
+ 
 }
-
 
 /* Align cards side by side */
 .add-event,
@@ -93,38 +94,36 @@ button:hover {
 
 .card {
   position: relative;
-  width: 570px;
-  /* height: 420px; */
+  width: 65%;
+  min-width: 600px;
 }
 
-.card h3 {
+.card h2 {
   text-align: center;
 }
 
 .card button {
-  width: 230px;
-  margin: 10px 10px;
+  width: 320px;
+  margin: 20px 20px;
   padding: 10px;
   display: inline-block;
+  margin-left: 30px;
 }
 
-/* DOM section */
+/* #Dom */
 .DOM {
   margin-top: 30px;
-  width: 780px;
-  margin-left: 10px;
+  width: 100%;
 }
 
 /* Simple background container */
 .bg-container {
   background-color: #71d3f7;
-  padding: 15px 30px;
-  border-radius: 10px;
-  width: 950px;
-  
-  
+  padding: 40px;
+  border-radius: 16px;
+  width: 95%;
+  max-width: 1300px;
 }
-
 
 /* Event card */
 
@@ -139,9 +138,15 @@ button:hover {
   background: linear-gradient(135deg, #f4c6ec, #ffb7dc);
   padding: 16px 18px;
   border-radius: 10px;
- 
-  width: 100%;
+  width: 320px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  margin-left: 30px;
+  transition: transform 0.2s ease;
+}
+
+.event-item:hover {
+  transform: scale(1.05);
+ 
 }
 
 /* Event title */
@@ -166,14 +171,12 @@ button:hover {
   margin-right: 6px;
 }
 
-
 /* Description */
 .event-item p {
   margin-top: 8px;
   font-size: 14px;
   color: #1f2937;
 }
-
 
 /* cross delete button  */
 .event-item {
