@@ -38,7 +38,7 @@ function createEvent(name, date, desc, category) {
     <span class="category">${category}</span>
   `;
 
-  // delete functionality
+  // delete functionality by clicking it will delete the particular eventcard
   const deleteBtn = eventDiv.querySelector(".delete-btn");
   deleteBtn.addEventListener("click", () => {
     eventDiv.remove();
@@ -47,23 +47,20 @@ function createEvent(name, date, desc, category) {
   eventsList.appendChild(eventDiv);
 }
 
-// CLEAR ALL EVENTS
+// CLEAR ALL EVENTS Button will work here
 clearBtn.addEventListener("click", () => {
-  eventsList.innerHTML = "";
+  eventsList.innerHTML = ""; //delete content inside it
 });
-// ADD SAMPLE EVENTS
+
+// ADD SAMPLE EVENTS  sample events will be added when the button is clicked and this will
+// go inside the createEvent function then card create will happen
 sampleBtn.addEventListener("click", () => {
   createEvent("Emifest", "2026-01-14", "Lorem ipsum", "Work");
   createEvent("Project Review", "2026-02-10", "Frontend submission", "Other");
 });
 
-// for keys to display
-const keyDisplay = document.getElementById("key-display");
 
-document.addEventListener("keydown", (event) => {
-  keyDisplay.textContent = "You pressed: " + event.key;
-});
-
+//dom manipulation 
 
 const htmlResult = document.getElementById("innerHTML-result");
 const textResult = document.getElementById("innerText-result");
@@ -72,20 +69,16 @@ const keydisplay = document.getElementById("key-display");
 
 const sample = "<strong>Bold Text</strong> with spaces";
 
-// innerHTML → renders HTML
-htmlResult.innerHTML =
-  "<strong>innerHTML:</strong> " + sample;
+htmlResult.innerHTML = "<strong>innerHTML:</strong> " + sample;
 
-// innerText → removes HTML tags
-textResult.innerHTML =
-  "<strong>innerText:</strong>"+  "Bold Text with spaces";
+textResult.innerHTML = "<strong>innerText:</strong>" + "Bold Text with spaces";
 
-// textContent → removes HTML tags
-contentResult.innerHTML =
-  "<strong>textContent:</strong> Bold Text with spaces";
+contentResult.innerHTML = "<strong>textContent:</strong> Bold Text with spaces";
 
-// Key detection
-document.addEventListener("keydown", (event) => {
-  keydisplay.textContent = "You pressed: " + event.key;
+
+// for keys to display detection which key is pressed
+const keyDisplay = document.getElementById("key-display");
+
+document.addEventListener("keydown", (army) => {
+  keyDisplay.textContent = "You pressed: " + army.key; //textcontent for inside content change
 });
-
