@@ -63,3 +63,29 @@ const keyDisplay = document.getElementById("key-display");
 document.addEventListener("keydown", (event) => {
   keyDisplay.textContent = "You pressed: " + event.key;
 });
+
+
+const htmlResult = document.getElementById("innerHTML-result");
+const textResult = document.getElementById("innerText-result");
+const contentResult = document.getElementById("textContent-result");
+const keydisplay = document.getElementById("key-display");
+
+const sample = "<strong>Bold Text</strong> with spaces";
+
+// innerHTML → renders HTML
+htmlResult.innerHTML =
+  "<strong>innerHTML:</strong> " + sample;
+
+// innerText → removes HTML tags
+textResult.innerHTML =
+  "<strong>innerText:</strong>"+  "Bold Text with spaces";
+
+// textContent → removes HTML tags
+contentResult.innerHTML =
+  "<strong>textContent:</strong> Bold Text with spaces";
+
+// Key detection
+document.addEventListener("keydown", (event) => {
+  keydisplay.textContent = "You pressed: " + event.key;
+});
+
